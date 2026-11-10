@@ -49,21 +49,21 @@ The primary objective is to identify systemic credit default drivers, diagnose d
 
 To proactively prevent delinquency escalation, a rule-based 3-Tier risk framework was engineered using SQL and Python:
 
-                ┌──────────────────────────────────────────────┐
-                │        Early Warning System (EWS)            │
-                └──────────────────────┬───────────────────────┘
-                                       │
-         ┌─────────────────────────────┼─────────────────────────────┐
-         ▼                             ▼                             ▼
-┌───────────────────┐        ┌───────────────────┐        ┌───────────────────┐
-│  Tier 1: Low Risk │        │Tier 2: Medium Risk│        │ Tier 3: High Risk │
-│     (12.26%)      │        │     (30.59%)      │        │     (57.15%)      │
-├───────────────────┤        ├───────────────────┤        ├───────────────────┤
-│ • DSR ≤ 0.50      │        │ • DSR > 0.50      │        │ • DSR > 0.80      │
-│ • Limit Util ≤ 60%│        │ • Limit Util > 60%│        │ • Limit Util > 80%│
-│ • Active Apps < 3 │        │ • Active Apps ≥ 3 │        │ • Active Apps ≥ 5 │
-└───────────────────┘        └───────────────────┘        └───────────────────┘
+```
+                  Early Warning System (EWS)
+                              │
+         ┌────────────────────┼────────────────────┐
+         ▼                    ▼                    ▼
+┌───────────────────┐┌───────────────────┐┌───────────────────┐
+│ Tier 1: Low Risk  ││Tier 2: Medium Risk││ Tier 3: High Risk │
+│     (12.26%)      ││     (30.59%)      ││     (57.15%)      │
+├───────────────────┤├───────────────────┤├───────────────────┤
+│ • DSR ≤ 0.50      ││ • DSR > 0.50      ││ • DSR > 0.80      │
+│ • Limit Util ≤ 60%││ • Limit Util > 60%││ • Limit Util > 80%│
+│ • Active Apps < 3 ││ • Active Apps ≥ 3 ││ • Active Apps ≥ 5 │
+└───────────────────┘└───────────────────┘└───────────────────┘
 
+```
 ---
 
 ## Strategic Recommendations & Action Plan
